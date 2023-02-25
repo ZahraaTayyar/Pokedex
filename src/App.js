@@ -9,7 +9,7 @@ function App() {
     let date = new Date().toLocaleDateString();
   return (
     <div>
-      <Logo appName={"Zahraa"}/>
+      <Logo appName={"Zahraa's Pokedex"}/>
       <BestPokemon abilities={abilities}/>
       <CaughtPokemon date={date}/>
     </div>

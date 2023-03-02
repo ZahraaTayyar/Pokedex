@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const CaughtPokemon = (props) => {
   const [caught, setCaught] = useState([]);
-  const randomPokemon = Math.floor(Math.random() * caught.length);
   function catchPokemon() {
     setCaught(caught.concat("Pikachu", "Eevee", "Charizard"));
   }

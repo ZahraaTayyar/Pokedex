@@ -5,13 +5,16 @@ import CaughtPokemon from "./CaughtPokemon";
 // import reactDom from "react-dom";
 
 function App() {
-    let abilities = ["Anticipation", "Adaptability", "Run-Away"];
-    let date = new Date().toLocaleDateString();
+  function LogWhenClicked() {
+    console.log("Hi!");
+  }
+  let abilities = ["Anticipation", "Adaptability", "Run-Away"];
+  let date = new Date().toLocaleDateString();
   return (
     <div>
-      <Logo appName={"Zahraa's Pokedex"}/>
-      <BestPokemon abilities={abilities}/>
-      <CaughtPokemon date={date}/>
+      <Logo appName={"Zahraa's Pokedex"} handleClick={LogWhenClicked}/>
+      <BestPokemon abilities={abilities} />
+      <CaughtPokemon date={date} />
     </div>
   );
 }

@@ -2,18 +2,26 @@ import React, { useState } from "react";
 
 const CaughtPokemon = (props) => {
   const [caught, setCaught] = useState([]);
+  const randomPokemon = ["Pikachu", "Eevee", "Charizard"];
   function catchPokemon() {
-    setCaught(caught.concat("Pikachu", "Eevee", "Charizard"));
+    let randomIndex = Math.floor(Math.random() * randomPokemon.length);
+    setCaught((oldCaught) => oldCaught.concat(randomPokemon[randomIndex]));
+    // setCaught((prevCaught) => {
+    //   const newPokemon = randomPokemon[]
+    //   [...prevCaught, newPokemon]
+    // });
   }
   return (
     <div class="add-pokemon-container">
+      <p>Caught {caught.length} Pokemon on {props.date}</p>
       <button onClick={catchPokemon}>
         Click to add a Pokemon to your collection!
       </button>
-      <p>Caught {caught.length} Pokemon on {props.date}</p>
-      <ul>{caught.map((animal, index) => {
-        return <li key={index}>{animal}</li>;
-      })}</ul>
+      <ul>{
+        caught.map((animal, index) => (
+         <li key={index}> {animal} </li>
+        ))
+      }</ul>
     </div>
   );
 };

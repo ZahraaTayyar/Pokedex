@@ -5,7 +5,7 @@
 }
 
 body {
-  margin-top: 3rem;
+  padding: 3rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -15,7 +15,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #B1D4E0;
+  background-color: brown;
 }
 
 code {
@@ -23,33 +23,72 @@ code {
     monospace;
 }
 
-.add-pokemon-container {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  border: solid #FFC300 25px;
+  border-radius: 20px;
+  padding: 2rem;
+  height: 90vh;
+  box-shadow: 2px 2px 30px;
+  background-color: #8ec1d2;
+}
+
+header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid white 2px;
-  border-radius: 40px;
-  padding: 30px;
-  background-color: #8ec1d2;
-  /* box-shadow: 2px 5px 50px #FB8DA0; */
+  flex-wrap: wrap;
 }
 
-.add-pokemon-container button {
-  border: 2px solid white;
-  border-radius: 30px;
-  padding: 15px;
-  background-color: #FB8DA0;
-  width: 250px;
+header img {
+  width: 50%;
+  border: solid #FFC300 8px;
+  border-radius: 7px;
+  box-shadow: 2px 2px 30px;
+  margin-top: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+input {
+  border: 1px solid #B1D4E0;
+  border-radius: 10px;
+  padding: 10px;
+  width: 75%;
   font-size: 17px;
 }
 
-.add-pokemon-container button:hover {
-  background-color: #8A8AFF;
+button {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #FB8DA0;
+  width: 175px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#clear-btn {
+  background-color: brown;
   color: white;
-  border: solid white 2px;
+  width: 75px;
+}
+
+button:hover {
+  background-color: #f66a82;
+  color: white;
+  border: solid white 1px;
 }
 
 .add-pokemon-container p {
@@ -58,4 +97,30 @@ code {
 
 .add-pokemon-container ul {
   margin-top: 1rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.favourite-pokemon {
+  border-bottom: solid grey 1px;
+}
+
+.add-pokemon {
+  border-bottom: solid grey 1px;
+}
+
+.pokemon-moves {
+  border-bottom: solid grey 1px;
 }

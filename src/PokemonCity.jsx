@@ -8,7 +8,7 @@ function PokemonCity() {
   }
 
   return (
-    <div class="city container">
+    <div className="city container">
       <input type="text" value={city} onChange={updateCity}/>
       <p>Welcome to the city of {city}</p>
     </div>

@@ -15,7 +15,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: brown;
+  background: brown;
+  /* background-image: url('src/pokemon-party.jpg'); */
 }
 
 code {
